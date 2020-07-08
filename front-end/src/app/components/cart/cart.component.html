@@ -1,0 +1,33 @@
+<app-nav></app-nav>
+<br><br><br><br>
+<div class="container" >
+    <div class="row" >
+        <!-- <div class="col-sm-2"></div>  -->
+        
+        <ul *ngFor= "let s of get_cart_products " >
+          <li>
+       
+        <div class="col-sm-3" class="card" style="width: 25rem; height:30rem" >
+            <img class="card-img-top" src="{{s.image}}" alt="Card image cap" style="height: 65%;" >
+        <div class="card-body">
+            <h5 class="card-title" style="color: blue;">{{s.Name}}</h5>
+            <h5 class="card-title" >{{s.Location}}</h5>
+            <h5 class="card-title" >price: {{s.price}}</h5>
+            <!-- <button type="button" class="btn btn-warning btn-lg" (click)="add_to_cart(s)"> <i class="fa fa-shopping-cart" aria-hidden="true" style="color:red;"></i></button> -->
+            <button type="button" class="btn btn-success btn" >place order <i class="fa fa-check" aria-hidden="true"></i></button>
+            <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <button type="button" class="btn btn-danger btn" style="float: right;" (click)="delete_from_cart(s.id)">delete from  cart <i class="fa fa-trash" aria-hidden="true"></i></button>
+    
+        </div>
+        </div>
+        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+      
+      </li>
+      
+        </ul>
+      
+        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+    
+    </div>
+    
+    </div>

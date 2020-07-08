@@ -1,0 +1,119 @@
+<div style="background: greenyellow;">
+    <div class="signup-form" >
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm" name="signupForm" >
+    <h2>Sign Up</h2>
+    <p>Please fill in this form to create an account!</p>
+    <hr>
+        <!-- <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <span class="fa fa-user"></span>
+          </span>                    
+        </div>
+        <input type="text" class="form-control" name="email" placeholder="user email" ngModel required="required">
+      </div>
+        </div> -->
+        <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-paper-plane"></i>
+          </span>                    
+        </div>
+        <input type="email" class="form-control" name="email" placeholder="Email Address" ngModel required="required">
+      </div>
+        </div>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-lock"></i>
+          </span>                    
+        </div>
+        <input type="text" class="form-control" name="password" placeholder="Password" ngModel required="required">
+      </div>
+        </div>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">
+            <i class="fa fa-lock"></i>
+            <i class="fa fa-check"></i>
+          </span>                    
+        </div>
+        <input type="text" class="form-control" name="confirm_password" placeholder="Confirm Password" ngModel required="required">
+      </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <span class="fa fa-user"></span>
+              </span>                    
+            </div>
+            <input type="text" class="form-control" name="first_name" placeholder="first name" ngModel required="required">
+          </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <span class="fa fa-user"></span>
+                  </span>                    
+                </div>
+                <input type="text" class="form-control" name="last_name" placeholder="last name" ngModel required="required">
+              </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <span class="fa fa-user"></span>
+                      </span>                    
+                    </div>
+                    <input type="text" class="form-control" name="phone_number" placeholder="phone number" ngModel required="required">
+                  </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">
+                            <h5>Gender</h5>
+                            <h5>&nbsp;&nbsp;&nbsp;</h5>
+                            <span class="fa fa-male"></span>
+                            <h5>&nbsp;</h5>
+                            <input type="radio" id="male" name="gender" value="male" ngModel>
+                            <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5>
+                            <span class="fa fa-female" ></span>
+                            <h5>&nbsp;</h5>
+
+                          <input type="radio" id="female" name="gender" value="female" ngModel>
+                          </span>
+                                            
+                        </div>              <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5>
+
+                      
+                        
+                                            </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                                                 
+                            </div>
+                            <span style="color:red;" *ngIf="message">{{message}}</span>
+                            <input #file type="file" accept='image/*' (change)="preview(file.files)" />
+                            <img [src]="imgURL" height="200" *ngIf="imgURL">                          </div>
+                            </div>
+                           
+      
+      
+        
+    <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-lg"  style="margin-left: 100px;">Sign Up</button>
+        </div>
+      </form> 
+  <div class="text-center"><h3>Already have an account? <a [routerLink]="['/login']">Login here</a></h3></div>
+  </div>
+  </div>

@@ -1,0 +1,11 @@
+{
+    "users" : [
+    { "email": "demo@gmail.com", "password" : "demo", "first_name": "demo", "last_name": "demo", "phone":9999999,
+       "gender":"male","image":"","image_file_name":"demo_image"  
+    }
+
+    ]
+
+
+}
+
